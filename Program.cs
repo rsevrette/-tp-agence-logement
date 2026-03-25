@@ -17,6 +17,19 @@ class Program
         appartement1.Afficher();
         Maison maison1 = new Maison("maison2", "rue", 400, 3000, true, 300);
         maison1.Afficher();
+        Console.WriteLine();
 
+        //Partie4
+        Console.WriteLine("______________Partie 4______________");
+        logement1.Afficher();
+        logement1.CalculerLoyer();
+        logement2.Afficher();
+        logement2.CalculerLoyer();
+        studio1.Afficher();
+        studio1.CalculerLoyer();
+        appartement1.Afficher();
+        appartement1.CalculerLoyer();
+        maison1.Afficher();
+        maison1.CalculerLoyer();
     }
 }

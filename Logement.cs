@@ -16,12 +16,12 @@ class Logement
         this.adresse = adresse;
         this.disponible = disponible;
     }
-    public void Afficher()
+    public virtual void Afficher()
     {
         Console.WriteLine($"{reference} | {adresse} | surface: {surface} | loyer: {loyerBase} | disponible: {disponible}");
     }
-    public void CalculerLoyer()
+    public virtual void CalculerLoyer()
     {
-        
+        Console.WriteLine($"loyer calculer: {loyerBase} €");
     }
 }

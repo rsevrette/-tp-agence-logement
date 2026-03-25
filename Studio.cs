@@ -10,4 +10,14 @@ class Studio : Logement
     {
         Console.WriteLine($"{reference} | {adresse} | surface: {surface} | loyer: {loyerBase} | disponible: {disponible} | meublé: {meuble}");
     }
+    public override void CalculerLoyer()
+    {
+        double loyerCalculer;
+        if (meuble) 
+        {
+            loyerCalculer = loyerBase + 50;
+            Console.WriteLine($"loyer calculer: {loyerCalculer} €");
+        }
+        else Console.WriteLine($"loyer calculer: {loyerBase} €");
+    }
 }
