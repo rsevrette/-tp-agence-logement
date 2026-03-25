@@ -58,5 +58,12 @@ class Program
                 maison.CalculerLoyer();
             }
         }
+
+        //Partie6
+        Console.WriteLine("\n______________Partie 6______________");
+        Locataire locataire1 = new Locataire("ClouVis", "06854892549");
+        locataire1.Afficher();
+        Locataire locataire2 = new Locataire("lukaka", "0688546449");
+        locataire2.Afficher();
     }
 }
