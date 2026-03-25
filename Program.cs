@@ -5,12 +5,14 @@ class Program
     static void Main(string[] args)
     {
         //Partie 1
+        Console.WriteLine("\n______________Partie 1______________");
         Logement logement1 = new Logement("maison1", "rue", 100, 500, true);
         logement1.Afficher();
         Logement logement2 = new Logement("appart1", "rue", -100, -500, false);
         logement2.Afficher();
 
         //Partie2
+        Console.WriteLine("\n______________Partie 2______________");
         Studio studio1 = new Studio("studio1", "8 rue", 90, 600, true, true);
         studio1.Afficher();
         Appartement appartement1 = new Appartement("appartement1", "rue", 90, 550, false, 2);
@@ -20,7 +22,7 @@ class Program
         Console.WriteLine();
 
         //Partie4
-        Console.WriteLine("______________Partie 4______________");
+        Console.WriteLine("\n______________Partie 4______________");
         logement1.Afficher();
         logement1.CalculerLoyer();
         logement2.Afficher();
@@ -31,5 +33,30 @@ class Program
         appartement1.CalculerLoyer();
         maison1.Afficher();
         maison1.CalculerLoyer();
+
+        //Partie5
+        Console.WriteLine("\n______________Partie 5______________");
+        List<Logement> logements = new List<Logement>();
+        logements.Add(studio1);
+        logements.Add(appartement1);
+        logements.Add(maison1);
+        foreach (Logement l in logements)
+        {
+            if (l is Studio studio)
+            {
+                studio.Afficher();
+                studio.CalculerLoyer();
+            }
+            else if (l is Appartement appartement)
+            {
+                appartement.Afficher();
+                appartement.CalculerLoyer();
+            }
+            else if (l is Maison maison)
+            {
+                maison.Afficher();
+                maison.CalculerLoyer();
+            }
+        }
     }
 }
