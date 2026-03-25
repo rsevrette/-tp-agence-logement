@@ -10,10 +10,10 @@ class Appartement : Logement
     {
         Console.WriteLine($"{reference} | {adresse} | surface: {surface} | loyer: {loyerBase} | disponible: {disponible} | nb piece: {nombrePieces}");
     }
-    public override void CalculerLoyer()
+    public override double CalculerLoyer()
     {
-        double loyerCalculer;
-        loyerCalculer = loyerBase + (100* nombrePieces);
-        Console.WriteLine($"loyer calculer: {loyerCalculer} €");
+        double loyerCalcule = loyerBase + (100 * nombrePieces);
+        Console.WriteLine($"Loyer calculé: {loyerCalcule} €");
+        return loyerCalcule;
     }
 }

@@ -1,10 +1,10 @@
 class Logement
 {
-    protected string reference;
+    public string reference;
     protected string adresse;
     protected int surface;
     protected double loyerBase;
-    protected bool disponible;
+    public bool disponible;
 
     public Logement(string reference, string adresse, int surface, double loyerBase, bool disponible)
     {
@@ -20,8 +20,9 @@ class Logement
     {
         Console.WriteLine($"{reference} | {adresse} | surface: {surface} | loyer: {loyerBase} | disponible: {disponible}");
     }
-    public virtual void CalculerLoyer()
+    public virtual double CalculerLoyer()
     {
-        Console.WriteLine($"loyer calculer: {loyerBase} €");
+        Console.WriteLine($"Loyer calculé: {loyerBase} €");
+        return loyerBase;
     }
 }

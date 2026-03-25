@@ -1,7 +1,7 @@
 class Locataire
 {
     static int id;
-    private string nom;
+    public string nom;
     private string telephone;
     public Locataire(string nom, string telephone)
     {

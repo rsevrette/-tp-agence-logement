@@ -10,10 +10,11 @@ class Maison : Logement
     {
         Console.WriteLine($"{reference} | {adresse} | surface: {surface} | loyer: {loyerBase} | disponible: {disponible} | surface jardin: {surfaceJardin}");
     }
-    public override void CalculerLoyer()
+    public override double CalculerLoyer()
     {
         double loyerCalculer;
         loyerCalculer = loyerBase + (10*surfaceJardin);
-        Console.WriteLine($"loyer calculer: {loyerCalculer} €");    
+        Console.WriteLine($"loyer calculer: {loyerCalculer} €");
+        return loyerCalculer;    
     }
 }
